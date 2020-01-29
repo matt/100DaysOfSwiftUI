@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Dice" representedClassName="Dice" syncable="YES">
+        <attribute name="value" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="rolls" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Roll" inverseName="dice" inverseEntity="Roll"/>
+    </entity>
+    <entity name="Roll" representedClassName="Roll" syncable="YES">
+        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="dice" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Dice" inverseName="rolls" inverseEntity="Dice"/>
+    </entity>
+    <elements>
+        <element name="Dice" positionX="-54" positionY="0" width="128" height="73"/>
+        <element name="Roll" positionX="-27" positionY="36" width="128" height="73"/>
+    </elements>
+</model>
